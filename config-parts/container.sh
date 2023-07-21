@@ -27,7 +27,7 @@ set container name coredns volume coredns-hosts source '/config/containers/cored
 # haproxy k8s load balancer
 
 set container name k8s-lb cap-add 'net-bind-service'
-set container name k8s-lb image 'public.ecr.aws/docker/library/haproxy:2.7.3-alpine'
+set container name k8s-lb image 'public.ecr.aws/docker/library/haproxy:2.8.1-alpine'
 set container name k8s-lb memory '0'
 set container name k8s-lb network containers address '10.0.254.3'
 set container name k8s-lb shared-memory '0'
@@ -38,7 +38,7 @@ set container name k8s-lb volume k8s-lb-config source '/config/containers/k8s-lb
 # unifi
 
 set container name unifi-network environment TZ value 'America/New_York'
-set container name unifi-network image 'ghcr.io/goofball222/unifi:7.3.83'
+set container name unifi-network image 'ghcr.io/goofball222/unifi:7.4.162'
 set container name unifi-network memory '0'
 set container name unifi-network network containers address '10.0.254.4'
 set container name unifi-network shared-memory '0'

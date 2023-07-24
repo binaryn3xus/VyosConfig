@@ -52,7 +52,7 @@ Example:
 > - Include a `.gitignore` file in all folders and set it to ignore everything by default: `/*`
 > - To add specific files or folders to the repository, allowlist them with `!` before the file or folder name. For example: `!/apply-config.sh` or `!config-parts/` for files and folders (respectively).
 >
-> This is to prevent accidentially committing files from the vyos system unintentially if you are working on the configuration from within the vyos system.
+> This is to prevent accidentially committing unintented/sensitive files from being added to your repository.
 
 ---
 

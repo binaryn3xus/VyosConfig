@@ -2,9 +2,17 @@
 
 ## Requirements
 - [Vyos System](https://docs.vyos.io/en/latest/)
+- [Git](https://git-scm.com/)
 - [SOPS](https://github.com/getsops/sops)
 
 ## Getting Started
+
+### Install Git
+
+```sh
+sudo apt update
+sudo apt install git
+```
 
 ### Installing SOPS on Vyos
 
@@ -35,10 +43,16 @@ Example:
 ├─📁 config-parts     # Vyos commands split into seperate files
 ├─📁 containers       # Container configurations
 └─📁 scripts          # Vyos scripts
-└─ ...etc...          # All other files
+└─🗒️ .gitignore       # gitignore file
+└─🗒️ ..etc..          # All other files
 ```
 
-_Be aware your repo will share the location with other offical vyos files and be mixed in. Your `.gitignore` is important here!_
+> **NOTE: Handling `.gitignore` Files**
+>
+> - Include a `.gitignore` file in all folders and set it to ignore everything by default: `/*`
+> - To add specific files or folders to the repository, allowlist them with `!` before the file or folder name. For example: `!/apply-config.sh` or `!config-parts/` for files and folders (respectively).
+>
+> This is to prevent accidentially committing files from the vyos system unintentially if you are working on the configuration from within the vyos system.
 
 ---
 

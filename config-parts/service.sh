@@ -2,12 +2,12 @@
 
 # Dynamic
 set service dns dynamic interface eth0 service main host-name 'ipv4'
-set service dns dynamic interface eth0 service main host-name "ipv4.${SECRET_PUBLIC_DOMAIN}"
-set service dns dynamic interface eth0 service main login "${SECRET_CLOUDFLARE_EMAIL}"
-set service dns dynamic interface eth0 service main password "${SECRET_CLOUDFLARE_KEY}"
+set service dns dynamic interface eth0 service main host-name 'ipv4.${SECRET_PUBLIC_DOMAIN}'
+set service dns dynamic interface eth0 service main login '${SECRET_CLOUDFLARE_EMAIL}'
+set service dns dynamic interface eth0 service main password '${SECRET_CLOUDFLARE_KEY}'
 set service dns dynamic interface eth0 service main protocol 'cloudflare'
 set service dns dynamic interface eth0 service main server 'api.cloudflare.com/client/v4'
-set service dns dynamic interface eth0 service main zone "${SECRET_PUBLIC_DOMAIN}"
+set service dns dynamic interface eth0 service main zone '${SECRET_PUBLIC_DOMAIN}'
 
 # Forwarding
 set service dns forwarding allow-from '10.0.10.0/24'

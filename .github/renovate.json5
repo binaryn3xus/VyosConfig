@@ -3,7 +3,7 @@
   "platform": "github",
   "username": "unsc-oni-ancilla[bot]",
   "gitAuthor": "UNSC-ONI-ANCILLA <121069198+UNSC-ONI-ANCILLA[bot]@users.noreply.github.com>",
-  "repositories": ["binaryn3xus/VyosConfig"]
+  "repositories": ["binaryn3xus/VyosConfig"],
   "regexManagers": [
     {
       "description": ["Generic Docker image Regex manager"],

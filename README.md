@@ -61,9 +61,9 @@ Example:
 ### Dry-Run
 
 ```sh
-cd /
 config
-run /config/apply-config.sh
+cd /config
+run ./apply-config.sh -c
 ```
 
 ### Actual Run
@@ -71,8 +71,8 @@ run /config/apply-config.sh
 _Notice the -c argument_
 
 ```sh
-cd /
 config
-run /config/apply-config.sh -c
+cd /config
+run ./apply-config.sh -c
 ```
 

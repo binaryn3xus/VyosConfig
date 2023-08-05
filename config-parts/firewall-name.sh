@@ -200,11 +200,13 @@ set firewall name wan-local rule 400 protocol 'udp'
 set firewall name wan-servers default-action 'drop'
 set firewall name wan-servers description 'From WAN to SERVERS'
 set firewall name wan-servers enable-default-log
+
 set firewall name wan-servers rule 301 action 'accept'
 set firewall name wan-servers rule 301 description 'Plexk3s - Allow incoming traffic on port 32400 to 10.0.30.32'
-set firewall name wan-servers rule 301 destination address '10.0.30.32'
+set firewall name wan-servers rule 301 destination group address-group 'k8s-ingress'
 set firewall name wan-servers rule 301 destination port '32400'
 set firewall name wan-servers rule 301 protocol 'tcp'
+
 set firewall name wan-servers rule 400 action 'accept'
 set firewall name wan-servers rule 400 description 'Rule: Accept ingress from Cloudflare'
 set firewall name wan-servers rule 400 destination group address-group 'k8s-ingress'

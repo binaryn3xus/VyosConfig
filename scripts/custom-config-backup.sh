@@ -19,7 +19,7 @@ if mountpoint -q $dest; then
     if [ ! -d "$backup_dest" ]; then
         mkdir "$backup_dest"
     fi
-    rsync -r /config/containers/unifi/data/backup/autobackup/ "$backup_dest"
+    rsync -r /config/containers/unifi/data/data/backup/autobackup/ "$backup_dest"
 
     # Delete backups older than 1 month
     find $dest -type f -mtime +30 -delete

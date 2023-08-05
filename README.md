@@ -1,13 +1,18 @@
-# VyosConfig
+![Static Badge](https://img.shields.io/badge/VyOS_Version-1.4-blue?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BinaryN3xus/VyosConfig?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/BinaryN3xus/VyosConfig?style=for-the-badge)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/binaryn3xus/VyosConfig/main?style=for-the-badge)
+
+This repo reflects my ongoing journey in configuring my home network with VyOS. While it may not be flawless, I hope it serves as a helpful resource for fellow HomeLab enthusiasts. Feel free to explore, learn, and contribute, as we all learn together!
 
 ## Requirements
-- [Vyos System](https://docs.vyos.io/en/latest/)
+- [VyOS System](https://docs.vyos.io/en/latest/)
 - [Git](https://git-scm.com/)
 - [SOPS](https://github.com/getsops/sops)
 
 ## Getting Started
 
-### Install Git
+### Install Git on VyOS
 
 ```sh
 sudo apt update
@@ -34,7 +39,7 @@ sudo apt install sops_3.7.3_amd64.deb
 
 ### Clone your configuration project
 
-Clone your configuration to the root folder `/`
+Clone your configuration to the root folder `/config`
 
 Example:
 

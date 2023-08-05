@@ -149,6 +149,6 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-pet-heating ip-address '10.0.20.88'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-pet-heating mac-address 'DC:4F:22:AA:06:B2'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-1 ip-address '10.0.20.89'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-1 '2C:F4:32:C3:4F:13'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-1 mac-address '2C:F4:32:C3:4F:13'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 ip-address '10.0.20.90'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 'D8:F1:5B:86:87:DC'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 mac-address 'D8:F1:5B:86:87:DC'

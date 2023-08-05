@@ -30,5 +30,5 @@ set system sysctl parameter kernel.pty.max value '24000'
 set system syslog global facility all level 'info'
 set system syslog global facility local7 level 'debug'
 
-#set system task-scheduler task backup-config crontab-spec '30 0 * * *'
-#set system task-scheduler task backup-config executable path '/config/scripts/custom-config-backup.sh'
+set system task-scheduler task backup-config crontab-spec '30 0 * * *'
+set system task-scheduler task backup-config executable path '/config/scripts/custom-config-backup.sh'

@@ -81,3 +81,28 @@ cd /config
 run ./apply-config.sh -c
 ```
 
+---
+
+## Scripts
+
+### Build-in Scripts
+The `vyos-preconfig-bootup.script` and `vyos-postconfig-bootup.script` scripts are officially supported script files that run either before or after the VyOS configuration during the boot process.
+
+The `/config/scripts/vyos-preconfig-bootup.script` script is called on boot **before** the VyOS configuration during boot process.
+
+The `/config/scripts/vyos-postconfig-bootup.script` script is called on boot **after** the VyOS configuration during boot process.
+
+You can find more information on this in the [Executing Configuration Scripts](https://docs.vyos.io/en/latest/automation/command-scripting.html#executing-configuration-scripts) for more information.
+
+### Custom Scripts
+
+As for the `custom-config-backup.sh`, this is a custom script that we will execute via a cronjob within VyOS. In order to do this, we must add a couple lines of code to our configuration.
+
+In your `system.sh`, you can add the following lines:
+
+```sh
+set system task-scheduler task backup-config crontab-spec '30 0 * * *'
+set system task-scheduler task backup-config executable path '/config/scripts/custom-config-backup.sh'
+```
+
+This snippet tells vyos to execute the script every day at 00:30.

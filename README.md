@@ -68,7 +68,7 @@ Example:
 ```sh
 config
 cd /config
-run ./apply-config.sh -c
+run ./apply-config.sh
 ```
 
 ### Actual Run

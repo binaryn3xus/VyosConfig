@@ -129,7 +129,7 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-server-rack ip-address '10.0.20.73'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-server-rack mac-address '98:f4:ab:dc:a2:45'
 
-# 10.0.20.8x / 10.0.20.9x - Tasmota
+# 10.0.20.8x / 10.0.20.9x - Tasmota/ESPHome
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-saltlamp ip-address '10.0.20.80'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-saltlamp mac-address '84:0D:8E:65:76:E6'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-pantry ip-address '10.0.20.81'
@@ -152,3 +152,5 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-1 mac-address '2C:F4:32:C3:4F:13'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 ip-address '10.0.20.90'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 mac-address 'D8:F1:5B:86:87:DC'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping esphome-presense-sensor-001 ip-address '10.0.20.91'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping esphome-presense-sensor-001 mac-address '80:64:6f:9b:cc:da'

@@ -38,7 +38,7 @@ set container name k8s-lb volume k8s-lb-config source '/config/containers/k8s-lb
 # unifi
 
 set container name unifi-network environment TZ value 'America/New_York'
-set container name unifi-network image 'docker.io/linuxserver/unifi-controller:7.4.162'
+set container name unifi-network image 'docker.io/linuxserver/unifi-controller:7.5.174'
 set container name unifi-network memory '0'
 set container name unifi-network network containers address '10.0.254.4'
 set container name unifi-network shared-memory '0'

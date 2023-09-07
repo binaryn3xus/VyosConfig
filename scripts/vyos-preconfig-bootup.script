@@ -3,10 +3,6 @@
 # Any modifications required to work around unfixed bugs or use
 # services not available through the VyOS CLI system can be placed here.
 
-# TODO: Remove if issues don't come back, turn back on if they do
-# Clean dangling container network files
-# rm /var/lib/cni/networks/containers/10.5.*
-
 # Mount USB Backup Drive
 # Use this command to get the ID: ls -la /dev/disk/by-id/*
 backupdest=/media/usb-backup

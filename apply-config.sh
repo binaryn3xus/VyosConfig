@@ -8,7 +8,7 @@ if [ "$(id -g -n)" != 'vyattacfg' ]; then
   exec sg vyattacfg -c "/bin/vbash $(readlink -f "$0") $*"
 fi
 
-while getopts "c" options; do
+while getopts "cx" options; do
   case "${options}" in
   # -c Commit changes - default is dry-run
   c)

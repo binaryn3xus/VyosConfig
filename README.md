@@ -81,11 +81,19 @@ cd /config
 run ./apply-config.sh -c
 ```
 
+### Options/Flags
+
+| Bash Shell Options 	| Default Value                   	| Description                                                                                                                                	|   	|
+|--------------------	|---------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------	|---	|
+| -c                 	| Will NOT commit automatically   	| Including the -c flag will commit and save the configuration                                                                               	|   	|
+| -x                 	| Will NOT remove orphaned images 	| Including the -x flag will remove the orphan container images that are no longer in use. Note: This only runs when -c is provided as well. 	|   	|
+|                    	|                                 	|                                                                                                                                            	|   	|
+
 ---
 
 ## Scripts
 
-### Build-in Scripts
+### Built-in Scripts
 The `vyos-preconfig-bootup.script` and `vyos-postconfig-bootup.script` scripts are officially supported script files that run either before or after the VyOS configuration during the boot process.
 
 The `/config/scripts/vyos-preconfig-bootup.script` script is called on boot **before** the VyOS configuration during boot process.

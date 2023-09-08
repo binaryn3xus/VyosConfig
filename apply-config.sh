@@ -2,9 +2,10 @@
 # shellcheck shell=bash
 # shellcheck source=/dev/null
 dry_run=true
+clean_obsolete_images=false
 
-if [ "$(id -g -n)" != 'vyattacfg' ] ; then
-    exec sg vyattacfg -c "/bin/vbash $(readlink -f "$0") $*"
+if [ "$(id -g -n)" != 'vyattacfg' ]; then
+  exec sg vyattacfg -c "/bin/vbash $(readlink -f "$0") $*"
 fi
 
 while getopts "c" options; do
@@ -13,6 +14,11 @@ while getopts "c" options; do
   c)
     echo 'Will commit changes'
     dry_run=false
+    ;;
+  # -x Clean obsolete container images
+  x)
+    echo 'Will clean obsolete container images'
+    clean_obsolete_images=true
     ;;
   *)
     echo 'error in command line parsing' >&2
@@ -37,8 +43,7 @@ fi
 
 # Apply environment to container (configuration) files
 restart_containers=""
-while IFS= read -r -d '' file
-do
+while IFS= read -r -d '' file; do
   cfgfile="${file%.tmpl}"
 
   shafile=$file.sha256
@@ -94,18 +99,20 @@ else
   save
 
   # Clean obsolete container images
-  IFS=$'\n' read -rd '' -a AVAILABLE_IMAGES <<<"$(run show container image | tail -n +2)"
-  for image in "${AVAILABLE_IMAGES[@]}"; do
-    image_name=$(echo "${image}" | awk '{ print $1 }')
-    image_tag=$(echo "${image}" | awk '{ print $2 }')
-    image_id=$(echo "${image}" | awk '{ print $3 }')
-    image_name_tag="${image_name}:${image_tag}"
+  if "$clean_obsolete"; then
+    IFS=$'\n' read -rd '' -a AVAILABLE_IMAGES <<<"$(run show container image | tail -n +2)"
+    for image in "${AVAILABLE_IMAGES[@]}"; do
+      image_name=$(echo "${image}" | awk '{ print $1 }')
+      image_tag=$(echo "${image}" | awk '{ print $2 }')
+      image_id=$(echo "${image}" | awk '{ print $3 }')
+      image_name_tag="${image_name}:${image_tag}"
 
-    if [[ ! " ${CONFIG_IMAGES[*]} " =~ \ ${image_name_tag}\  ]]; then
-      echo "Removing container ${image_name_tag}"
-      run delete container image "${image_id}"
-    fi
-  done
+      if [[ ! " ${CONFIG_IMAGES[*]} " =~ \ ${image_name_tag}\  ]]; then
+        echo "Removing container ${image_name_tag}"
+        run delete container image "${image_id}"
+      fi
+    done
+  fi
 
   # Restart containers
   for container in $restart_containers; do

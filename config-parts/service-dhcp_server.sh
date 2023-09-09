@@ -6,7 +6,7 @@ set service dhcp-server shared-network-name LAN ping-check
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 default-router '10.0.10.1'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 lease '86400'
-set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 name-server '10.0.10.1'
+set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 name-server '10.0.254.2'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 range 0 start '10.0.10.100'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 range 0 stop '10.0.10.254'
 
@@ -32,7 +32,7 @@ set service dhcp-server shared-network-name TRUSTED ping-check
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 default-router '10.0.20.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 lease '86400'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 name-server '10.0.20.1'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 name-server '10.0.254.2'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 start '10.0.20.100'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 stop '10.0.20.254'
 
@@ -117,7 +117,7 @@ set service dhcp-server shared-network-name SERVERS ping-check
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 default-router '10.0.30.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 lease '86400'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 name-server '10.0.30.1'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 name-server '10.0.254.2'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 start '10.0.30.100'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 stop '10.0.30.254'
 
@@ -152,6 +152,6 @@ set service dhcp-server shared-network-name GUEST ping-check
 set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 default-router '10.0.40.1'
 set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 lease '86400'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 name-server '10.0.40.1'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 name-server '10.0.254.2'
 set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 start '10.0.40.100'
 set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 stop '10.0.40.254'

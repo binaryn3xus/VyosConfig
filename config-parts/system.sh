@@ -4,7 +4,8 @@ set system domain-name 'fourthechelonhq.com'
 set system host-name 'vyos'
 set system time-zone 'America/New_York'
 
-set system name-server '10.0.254.2'
+set system name-server '1.1.1.1'
+set system name-server '1.0.0.1'
 
 set system ipv6 disable-forwarding
 

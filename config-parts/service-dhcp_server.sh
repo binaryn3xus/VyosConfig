@@ -1,22 +1,12 @@
 #!/bin/vbash
 
-# Guest VLAN
-set service dhcp-server shared-network-name GUEST authoritative
-set service dhcp-server shared-network-name GUEST ping-check
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 default-router '10.0.40.1'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 domain-name 'fourthechelonhq.com'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 lease '86400'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 name-server '10.0.254.2'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 start '10.0.40.100'
-set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 stop '10.0.40.254'
-
 # LAN VLAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN ping-check
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 default-router '10.0.10.1'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 lease '86400'
-set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 name-server '10.0.254.2'
+set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 name-server '10.0.10.1'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 range 0 start '10.0.10.100'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 range 0 stop '10.0.10.254'
 
@@ -35,41 +25,6 @@ set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 static-mappi
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 static-mapping UniFi-CloudKey-Gen2-Plus ip-address '10.0.10.8'
 set service dhcp-server shared-network-name LAN subnet 10.0.10.0/24 static-mapping UniFi-CloudKey-Gen2-Plus mac-address '74:83:c2:71:af:c5'
 
-# Servers VLAN
-
-set service dhcp-server shared-network-name SERVERS authoritative
-set service dhcp-server shared-network-name SERVERS ping-check
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 default-router '10.0.30.1'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 domain-name 'fourthechelonhq.com'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 lease '86400'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 name-server '10.0.254.2'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 start '10.0.30.100'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 stop '10.0.30.254'
-
-# 10.0.20.x - Misc Servers
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer ip-address '10.0.30.2'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer mac-address 'ac:e2:d3:0d:48:74'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-nightwatch ip-address '10.0.30.3'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-nightwatch mac-address 'b8:85:84:98:d9:6f'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity ip-address '10.0.30.4'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity mac-address '00:11:32:a7:1f:24'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 ip-address '10.0.30.5'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 mac-address 'e4:5f:01:e4:91:70'
-
-# 10.0.20.3x - Kubernetes Nodes
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 ip-address '10.0.30.11'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 mac-address 'b8:85:84:ad:fc:89'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node2 ip-address '10.0.30.12'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node2 mac-address 'b8:85:84:bf:db:f3'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node3 ip-address '10.0.30.13'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node3 mac-address '14:b3:1f:28:a6:b4'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 ip-address '10.0.30.14'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 mac-address 'ac:e2:d3:17:9d:0e'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 ip-address '10.0.30.15'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 mac-address 'ac:e2:d3:0d:48:71'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 ip-address '10.0.30.16'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 mac-address '6c:2b:59:eb:e3:be'
-
 # Trusted VLAN
 
 set service dhcp-server shared-network-name TRUSTED authoritative
@@ -77,7 +32,7 @@ set service dhcp-server shared-network-name TRUSTED ping-check
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 default-router '10.0.20.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 domain-name 'fourthechelonhq.com'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 lease '86400'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 name-server '10.0.254.2'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 name-server '10.0.20.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 start '10.0.20.100'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 stop '10.0.20.254'
 
@@ -154,3 +109,49 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-office-overhead-light-2 mac-address 'D8:F1:5B:86:87:DC'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping esphome-presense-sensor-001 ip-address '10.0.20.91'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping esphome-presense-sensor-001 mac-address '80:64:6f:9b:cc:da'
+
+# Servers VLAN
+
+set service dhcp-server shared-network-name SERVERS authoritative
+set service dhcp-server shared-network-name SERVERS ping-check
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 default-router '10.0.30.1'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 domain-name 'fourthechelonhq.com'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 lease '86400'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 name-server '10.0.30.1'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 start '10.0.30.100'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 stop '10.0.30.254'
+
+# 10.0.20.x - Misc Servers
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer ip-address '10.0.30.2'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer mac-address 'ac:e2:d3:0d:48:74'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-nightwatch ip-address '10.0.30.3'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-nightwatch mac-address 'b8:85:84:98:d9:6f'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity ip-address '10.0.30.4'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity mac-address '00:11:32:a7:1f:24'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 ip-address '10.0.30.5'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 mac-address 'e4:5f:01:e4:91:70'
+
+# 10.0.20.3x - Kubernetes Nodes
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 ip-address '10.0.30.11'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 mac-address 'b8:85:84:ad:fc:89'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node2 ip-address '10.0.30.12'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node2 mac-address 'b8:85:84:bf:db:f3'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node3 ip-address '10.0.30.13'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node3 mac-address '14:b3:1f:28:a6:b4'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 ip-address '10.0.30.14'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 mac-address 'ac:e2:d3:17:9d:0e'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 ip-address '10.0.30.15'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 mac-address 'ac:e2:d3:0d:48:71'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 ip-address '10.0.30.16'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 mac-address '6c:2b:59:eb:e3:be'
+
+# Guest VLAN
+
+set service dhcp-server shared-network-name GUEST authoritative
+set service dhcp-server shared-network-name GUEST ping-check
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 default-router '10.0.40.1'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 domain-name 'fourthechelonhq.com'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 lease '86400'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 name-server '10.0.40.1'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 start '10.0.40.100'
+set service dhcp-server shared-network-name GUEST subnet 10.0.40.0/24 range 0 stop '10.0.40.254'

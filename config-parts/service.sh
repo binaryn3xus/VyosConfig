@@ -9,6 +9,9 @@ set service dns forwarding name-server 1.1.1.1
 set service dns forwarding name-server 8.8.4.4
 set service dns forwarding name-server 8.8.8.8
 
+# Kubernetes DNS Forwarding
+set service dns forwarding domain unscfleet.com name-server 10.0.30.31
+
 # NTP Server
 set service ntp allow-client address '0.0.0.0/0'
 set service ntp allow-client address '::/0'

@@ -99,7 +99,8 @@ else
   save
 
   # Clean obsolete container images
-  if "$clean_obsolete"; then
+  if $clean_obsolete ; then
+    echo "Cleaning up orphaned container images"
     IFS=$'\n' read -rd '' -a AVAILABLE_IMAGES <<<"$(run show container image | tail -n +2)"
     for image in "${AVAILABLE_IMAGES[@]}"; do
       image_name=$(echo "${image}" | awk '{ print $1 }')

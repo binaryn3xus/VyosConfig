@@ -24,6 +24,7 @@ export EDITOR=nano
 alias podman="sudo podman"
 END
 chown vyos:users /home/vyos/.bash_aliases
+cp /config/secrets/id_ed25519 /home/vyos/.ssh/id_ed25519
 fi
 
 # Disable EEE on network interfaces as a workaround to i225/i226 issues

@@ -18,7 +18,7 @@ chown vyos:users /home/vyos/.gitconfig
 
 tee -a /home/vyos/.bash_aliases <<END >/dev/null
 export SOPS_AGE_KEY_FILE=/config/secrets/age.key
-export GIT_SSH_COMMAND="ssh -i /config/secrets/id_rsa"
+export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
 export VISUAL=nano
 export EDITOR=nano
 alias podman="sudo podman"

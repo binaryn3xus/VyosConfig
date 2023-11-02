@@ -36,6 +36,10 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 name-ser
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 start '10.0.20.100'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 stop '10.0.20.254'
 
+# 10.0.20.1x - PCs
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-PillarOfAutumn ip-address '10.0.20.10'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-PillarOfAutumn mac-address '0C:9D:92:85:5E:56'
+
 # 10.0.20.3x - Cameras
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping amcrest-livingroom-camera ip-address '10.0.20.30'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping amcrest-livingroom-camera mac-address '9c:8e:cd:0b:78:01'

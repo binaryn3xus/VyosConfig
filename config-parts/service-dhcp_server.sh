@@ -39,7 +39,9 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 range 0 
 # 10.0.20.1x - PCs
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-PillarOfAutumn ip-address '10.0.20.10'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-PillarOfAutumn mac-address '0C:9D:92:85:5E:56'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Cairo ip-address '10.0.20.11'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-AllUnderHeaven ip-address '10.0.20.11'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-AllUnderHeaven mac-address 'a0:a4:c5:92:a1:80'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Cairo ip-address '10.0.20.13'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Cairo mac-address '00:1f:c6:9c:9a:99'
 
 # 10.0.20.3x - Cameras

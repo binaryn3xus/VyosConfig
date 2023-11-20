@@ -50,3 +50,10 @@ set container name unifi shared-memory '0'
 set container name unifi volume data destination '/unifi'
 set container name unifi volume data mode 'rw'
 set container name unifi volume data source '/config/containers/unifi'
+
+# Netboot-xyz
+
+set container name netboot-xyz allow-host-networks
+set container name netboot-xyz image 'ghcr.io/netbootxyz/netbootxyz:0.6.7-nbxyz25'
+set container name netboot-xyz memory '0'
+set container name netboot-xyz shared-memory '0'

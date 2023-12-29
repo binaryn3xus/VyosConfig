@@ -140,6 +140,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity mac-address '00:11:32:a7:1f:24'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 ip-address '10.0.30.5'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 mac-address 'e4:5f:01:e4:91:70'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity ip-address '10.0.30.6'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity mac-address '0c:9d:92:85:5e:56'
 
 # 10.0.20.3x - Kubernetes Nodes
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 ip-address '10.0.30.11'

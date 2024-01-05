@@ -5,7 +5,7 @@
 $TTL 3600
 $ORIGIN unifi.
 @ 3600 IN SOA unifi. vyos.fourthechelonhq.com. (
-  1704490447         ; serial number (epoch timestamp)
+  1704490545         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time

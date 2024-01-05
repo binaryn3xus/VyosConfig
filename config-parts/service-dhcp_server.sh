@@ -83,14 +83,16 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roborock-vacuum-a38 mac-address 'b0:4a:39:71:44:15'
 
 # 10.0.20.7x - WLED
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-external-holiday ip-address '10.0.20.72'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-external-holiday mac-address '44:17:93:5d:6e:58'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-kitchen-cabinet ip-address '10.0.20.71'
-set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-kitchen-cabinet mac-address '78:21:84:3f:28:e8'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-office-ceiling ip-address '10.0.20.70'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-office-ceiling mac-address '30:c6:f7:bf:e9:74'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-kitchen-cabinet ip-address '10.0.20.71'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-kitchen-cabinet mac-address '78:21:84:3f:28:e8'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-external-holiday ip-address '10.0.20.72'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-external-holiday mac-address '44:17:93:5d:6e:58'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-server-rack ip-address '10.0.20.73'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-server-rack mac-address '98:f4:ab:dc:a2:45'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-living-room-tv ip-address '10.0.20.74'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-living-room-tv mac-address 'ec:fa:bc:c2:f6:60'
 
 # 10.0.20.8x / 10.0.20.9x - Tasmota/ESPHome
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping tasmota-saltlamp ip-address '10.0.20.80'
@@ -138,6 +140,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-infinity mac-address '00:11:32:a7:1f:24'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 ip-address '10.0.30.5'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 mac-address 'e4:5f:01:e4:91:70'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity ip-address '10.0.30.6'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity mac-address '0c:9d:92:85:5e:56'
 
 # 10.0.20.3x - Kubernetes Nodes
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 ip-address '10.0.30.11'

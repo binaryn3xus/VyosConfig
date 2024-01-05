@@ -4,8 +4,8 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN fourthechelonhq.com.
-@ 3600 IN SOA fourthechelonhq.com. gateway.fourthechelonhq.com. (
-  1704475517         ; serial number (epoch timestamp)
+@ 3600 IN SOA fourthechelonhq.com. vyos.fourthechelonhq.com. (
+  1704486894         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
@@ -13,7 +13,10 @@ $ORIGIN fourthechelonhq.com.
 )
 
 ; NS Records
-@                          IN  NS ns.fourthechelonhq.com.
+@                 IN  NS     vyos.fourthechelonhq.com.
+
+; LAN
+vyos              IN  A      10.0.10.1
 
 ; SERVERS
-pikvm             IN  A  10.0.30.5
+pikvm             IN  A      10.0.30.5

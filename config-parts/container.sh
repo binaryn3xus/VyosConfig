@@ -24,6 +24,21 @@ set container name coredns volume coredns-hosts destination '/config/hosts'
 set container name coredns volume coredns-hosts mode 'ro'
 set container name coredns volume coredns-hosts source '/config/containers/coredns/config/hosts'
 
+# bind
+set container name bind cap-add 'net-bind-service'
+set container name bind image 'docker.io/internetsystemsconsortium/bind9:9.19'
+set container name bind command '/usr/sbin/named -4 -f -c /etc/bind/named.conf -u bind'
+set container name bind memory '0'
+set container name bind network containers address '10.0.254.5'
+set container name bind restart 'on-failure'
+set container name bind shared-memory '0'
+set container name bind volume config destination '/etc/bind'
+set container name bind volume config source '/config/containers/bind/config'
+set container name bind volume config mode 'ro'
+set container name bind volume cache source '/tmp/bind/cache'
+set container name bind volume cache destination '/var/cache/bind'
+set container name bind volume cache mode 'rw'
+
 # haproxy k8s load balancer
 
 set container name k8s-lb cap-add 'net-bind-service'
@@ -50,10 +65,3 @@ set container name unifi shared-memory '0'
 set container name unifi volume data destination '/unifi'
 set container name unifi volume data mode 'rw'
 set container name unifi volume data source '/config/containers/unifi'
-
-# Netboot-xyz
-
-set container name netboot-xyz allow-host-networks
-set container name netboot-xyz image 'ghcr.io/netbootxyz/netbootxyz:0.6.7-nbxyz25'
-set container name netboot-xyz memory '0'
-set container name netboot-xyz shared-memory '0'

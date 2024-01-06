@@ -16,4 +16,4 @@ $ORIGIN unifi.
 @                             IN  NS vyos.fourthechelonhq.com.
 
 ; CNAME Records
-gateway                       IN  A  10.0.254.4
+@                       IN  A  10.0.254.4

@@ -5,7 +5,7 @@
 $TTL 3600
 $ORIGIN fourthechelonhq.com.
 @ 3600 IN SOA fourthechelonhq.com. vyos.fourthechelonhq.com. (
-  1704490545         ; serial number (epoch timestamp)
+  1704568874         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time

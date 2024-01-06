@@ -39,16 +39,29 @@ set container name bind volume cache source '/tmp/bind/cache'
 set container name bind volume cache destination '/var/cache/bind'
 set container name bind volume cache mode 'rw'
 
+# dnsdist
+set container name dnsdist cap-add 'net-bind-service'
+set container name dnsdist environment TZ value 'America/New_York'
+set container name dnsdist image 'docker.io/powerdns/dnsdist-18:1.8.3'
+set container name dnsdist arguments '--log-timestamps'
+set container name dnsdist memory '0'
+set container name dnsdist network services address '10.0.254.6'
+set container name dnsdist restart 'on-failure'
+set container name dnsdist shared-memory '0'
+set container name dnsdist volume config source '/config/containers/dnsdist/config/dnsdist.conf'
+set container name dnsdist volume config destination '/etc/dnsdist/dnsdist.conf'
+set container name dnsdist volume config mode 'ro'
+
 # haproxy k8s load balancer
 
-set container name k8s-lb cap-add 'net-bind-service'
-set container name k8s-lb image 'public.ecr.aws/docker/library/haproxy:2.9.1-alpine'
-set container name k8s-lb memory '0'
-set container name k8s-lb network containers address '10.0.254.3'
-set container name k8s-lb shared-memory '0'
-set container name k8s-lb volume k8s-lb-config destination '/usr/local/etc/haproxy/haproxy.cfg'
-set container name k8s-lb volume k8s-lb-config mode 'ro'
-set container name k8s-lb volume k8s-lb-config source '/config/containers/k8s-lb/config/haproxy.cfg'
+# set container name k8s-lb cap-add 'net-bind-service'
+# set container name k8s-lb image 'public.ecr.aws/docker/library/haproxy:2.9.1-alpine'
+# set container name k8s-lb memory '0'
+# set container name k8s-lb network containers address '10.0.254.3'
+# set container name k8s-lb shared-memory '0'
+# set container name k8s-lb volume k8s-lb-config destination '/usr/local/etc/haproxy/haproxy.cfg'
+# set container name k8s-lb volume k8s-lb-config mode 'ro'
+# set container name k8s-lb volume k8s-lb-config source '/config/containers/k8s-lb/config/haproxy.cfg'
 
 # unifi
 

@@ -4,8 +4,6 @@
 # Track certain files and directories
 !.gitignore
 
-!/bind/
-!/coredns/
-!/haproxy/
-!/unifi/
-!/dnsdist/
+!/config/
+/config/*
+!/config/dnsdist.conf

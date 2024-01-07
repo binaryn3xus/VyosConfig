@@ -9,5 +9,5 @@ backupdest=/media/usb-backup
 mkdir -p "$backupdest"
 mount.exfat-fuse -o rw,uid=vyos,gid=vyattacfg /dev/disk/by-id/usb-General_UDisk-0:0 "$backupdest"
 
-mkdir -p /tmp/bind/cache
-chown -R 104 /tmp/bind/cache
+#mkdir -p /tmp/bind/cache
+#chown vyos:users -R /tmp/bind/cache

@@ -69,15 +69,3 @@ set container name coredns volume coredns-corefile source '/config/containers/co
 set container name coredns volume coredns-hosts destination '/config/hosts'
 set container name coredns volume coredns-hosts mode 'ro'
 set container name coredns volume coredns-hosts source '/config/containers/coredns/config/hosts'
-
-# haproxy k8s load balancer
-
-# set container name k8s-lb cap-add 'net-bind-service'
-# set container name k8s-lb image 'public.ecr.aws/docker/library/haproxy:2.9.1-alpine'
-# set container name k8s-lb memory '0'
-# set container name k8s-lb network containers address '10.0.254.3'
-# set container name k8s-lb shared-memory '0'
-# set container name k8s-lb volume k8s-lb-config destination '/usr/local/etc/haproxy/haproxy.cfg'
-# set container name k8s-lb volume k8s-lb-config mode 'ro'
-# set container name k8s-lb volume k8s-lb-config source '/config/containers/k8s-lb/config/haproxy.cfg'
-

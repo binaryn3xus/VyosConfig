@@ -1,7 +1,12 @@
 #!/bin/vbash
 
 # Global Options
+# General configuration
+set firewall state-policy established action 'accept'
+set firewall state-policy invalid action 'drop'
+set firewall state-policy related action 'accept'
 
+set firewall all-ping 'enable'
 set firewall global-options all-ping 'enable'
 
 # Address Groups

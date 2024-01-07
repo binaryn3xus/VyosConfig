@@ -10,7 +10,7 @@ set container registry ghcr.io
 set container registry public.ecr.aws
 set container registry quay.io
 
-# unifi
+# unifi - 10.0.254.4
 
 set container name unifi environment CERT_IS_CHAIN value 'true'
 set container name unifi environment TZ value 'America/New_York'
@@ -26,7 +26,7 @@ set container name unifi volume data destination '/unifi'
 set container name unifi volume data mode 'rw'
 set container name unifi volume data source '/config/containers/unifi'
 
-# bind
+# bind - 10.0.254.5
 
 set container name bind cap-add 'net-bind-service'
 set container name bind image 'docker.io/internetsystemsconsortium/bind9:9.19'
@@ -42,7 +42,7 @@ set container name bind volume cache source '/tmp/bind/cache'
 set container name bind volume cache destination '/var/cache/bind'
 set container name bind volume cache mode 'rw'
 
-# dnsdist
+# dnsdist - 10.0.254.6
 
 set container name dnsdist cap-add 'net-bind-service'
 set container name dnsdist environment TZ value 'America/New_York'
@@ -56,7 +56,7 @@ set container name dnsdist volume config source '/config/containers/dnsdist/conf
 set container name dnsdist volume config destination '/etc/dnsdist/dnsdist.conf'
 set container name dnsdist volume config mode 'ro'
 
-# coredns
+# coredns - 10.0.254.2
 
 set container name coredns cap-add 'net-bind-service'
 set container name coredns image 'registry.k8s.io/coredns/coredns:v1.10.1'

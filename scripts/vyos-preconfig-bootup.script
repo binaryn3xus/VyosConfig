@@ -3,11 +3,12 @@
 # Any modifications required to work around unfixed bugs or use
 # services not available through the VyOS CLI system can be placed here.
 
+# Create container folders 
+mkdir -p /tmp/bind/cache
+chown vyos:users -R /tmp/bind/cache
+
 # Mount USB Backup Drive
 # Use this command to get the ID: ls -la /dev/disk/by-id/*
 backupdest=/media/usb-backup
 mkdir -p "$backupdest"
 mount.exfat-fuse -o rw,uid=vyos,gid=vyattacfg /dev/disk/by-id/usb-General_UDisk-0:0 "$backupdest"
-
-#mkdir -p /tmp/bind/cache
-#chown vyos:users -R /tmp/bind/cache

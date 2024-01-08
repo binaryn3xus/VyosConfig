@@ -5,7 +5,7 @@
 
 # Create container folders 
 mkdir -p /tmp/bind/cache
-chown vyos:users -R /tmp/bind/cache
+chown -R 104 /tmp/bind/cache
 
 # Mount USB Backup Drive
 # Use this command to get the ID: ls -la /dev/disk/by-id/*

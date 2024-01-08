@@ -59,7 +59,7 @@ set container name dnsdist volume config mode 'ro'
 # coredns - 10.0.254.2
 
 set container name coredns cap-add 'net-bind-service'
-set container name coredns image 'registry.k8s.io/coredns/coredns:v1.10.1'
+set container name coredns image 'registry.k8s.io/coredns/coredns:v1.11.1'
 set container name coredns memory '0'
 set container name coredns network containers address '10.0.254.2'
 set container name coredns shared-memory '0'

@@ -55,17 +55,3 @@ set container name dnsdist shared-memory '0'
 set container name dnsdist volume config source '/config/containers/dnsdist/config/dnsdist.conf'
 set container name dnsdist volume config destination '/etc/dnsdist/dnsdist.conf'
 set container name dnsdist volume config mode 'ro'
-
-# coredns - 10.0.254.2
-
-set container name coredns cap-add 'net-bind-service'
-set container name coredns image 'registry.k8s.io/coredns/coredns:v1.10.1'
-set container name coredns memory '0'
-set container name coredns network containers address '10.0.254.2'
-set container name coredns shared-memory '0'
-set container name coredns volume coredns-corefile destination '/Corefile'
-set container name coredns volume coredns-corefile mode 'ro'
-set container name coredns volume coredns-corefile source '/config/containers/coredns/config/Corefile'
-set container name coredns volume coredns-hosts destination '/config/hosts'
-set container name coredns volume coredns-hosts mode 'ro'
-set container name coredns volume coredns-hosts source '/config/containers/coredns/config/hosts'

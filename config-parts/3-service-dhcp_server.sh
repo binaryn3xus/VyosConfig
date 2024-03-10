@@ -158,6 +158,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 mac-address '6c:2b:59:eb:e3:be'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 ip-address '10.0.30.17'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 mac-address 'ac:e2:d3:0d:a3:e7'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 ip-address '10.0.30.18'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 mac-address '00:1f:c6:9c:9a:99'
 
 # Guest VLAN
 

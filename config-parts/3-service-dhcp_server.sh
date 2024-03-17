@@ -1,5 +1,10 @@
 #!/bin/vbash
 
+# Global
+set service dhcp-server global-parameters 'option system-arch code 93 = unsigned integer 16;'
+set service dhcp-server host-decl-name
+set service dhcp-server hostfile-update
+
 # LAN VLAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN ping-check
@@ -131,6 +136,15 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 name-ser
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 start '10.0.30.100'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 range 0 stop '10.0.30.254'
 
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'allow bootp;'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'allow booting;'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'next-server 10.0.10.1;'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; {'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'filename &quot;http://10.0.254.3/boot.ipxe&quot;;'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters '} else {'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters '}'
+
 # 10.0.20.x - Misc Servers
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer ip-address '10.0.30.2'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer mac-address 'ac:e2:d3:0d:48:74'
@@ -153,11 +167,9 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 ip-address '10.0.30.14'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node4 mac-address 'ac:e2:d3:17:9d:0e'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 ip-address '10.0.30.15'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 mac-address 'ac:e2:d3:0d:48:71'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node5 mac-address 'ac:e2:d3:0d:a3:e7'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 ip-address '10.0.30.16'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node6 mac-address '6c:2b:59:eb:e3:be'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 ip-address '10.0.30.17'
-set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node7 mac-address 'ac:e2:d3:0d:a3:e7'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node8 ip-address '10.0.30.18'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node8 mac-address '00:1f:c6:9c:9a:99'
 

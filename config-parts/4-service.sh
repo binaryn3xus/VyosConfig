@@ -26,3 +26,7 @@ set service ntp server time3.vyos.net
 # SSH Server
 set service ssh disable-password-authentication
 set service ssh port '22'
+
+# TFTP Server
+set service tftp-server directory '/config/tftpboot'
+set service tftp-server listen-address 10.0.10.1

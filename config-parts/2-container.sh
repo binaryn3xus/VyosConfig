@@ -10,6 +10,18 @@ set container registry ghcr.io
 set container registry public.ecr.aws
 set container registry quay.io
 
+# matchbox - 10.0.254.3
+set container name matchbox arguments '-address=0.0.0.0:80 -log-level=debug'
+set container name matchbox cap-add 'net-bind-service'
+set container name matchbox image 'quay.io/poseidon/matchbox:v0.10.0'
+set container name matchbox memory '0'
+set container name matchbox network containers address '10.0.254.3'
+set container name matchbox shared-memory '0'
+set container name matchbox volume matchbox-data destination '/var/lib/matchbox'
+set container name matchbox volume matchbox-data mode 'rw'
+set container name matchbox volume matchbox-data propagation 'private'
+set container name matchbox volume matchbox-data source '/config/containers/matchbox/data'
+
 # unifi - 10.0.254.4
 
 set container name unifi environment CERT_IS_CHAIN value 'true'
@@ -17,7 +29,7 @@ set container name unifi environment TZ value 'America/New_York'
 set container name unifi environment UNIFI_GID value '999'
 set container name unifi environment UNIFI_STDOUT value 'true'
 set container name unifi environment UNIFI_UID value '999'
-set container name unifi image 'ghcr.io/jacobalberty/unifi-docker:v8.0.26'
+set container name unifi image 'ghcr.io/jacobalberty/unifi-docker:v8.0.28'
 set container name unifi memory '0'
 set container name unifi network containers address '10.0.254.4'
 set container name unifi restart 'on-failure'

@@ -145,7 +145,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-p
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 subnet-parameters '}'
 
-# 10.0.20.x - Misc Servers
+# 10.0.30.0x - Misc Servers
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer ip-address '10.0.30.2'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping UbuntuServer mac-address 'ac:e2:d3:0d:48:74'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-nightwatch ip-address '10.0.30.3'
@@ -156,8 +156,10 @@ set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping pikvmv4 mac-address 'e4:5f:01:e4:91:70'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity ip-address '10.0.30.6'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping unsc-eternity mac-address '0c:9d:92:85:5e:56'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping SLZB-06M ip-address '10.0.30.7'
+set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping SLZB-06M mac-address 'd4:8a:fc:aa:71:7b'
 
-# 10.0.20.3x - Kubernetes Nodes
+# 10.0.30.1x - Kubernetes Nodes
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 ip-address '10.0.30.11'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node1 mac-address 'b8:85:84:ad:fc:89'
 set service dhcp-server shared-network-name SERVERS subnet 10.0.30.0/24 static-mapping fleetcom-node2 ip-address '10.0.30.12'

@@ -30,6 +30,7 @@ set interfaces wireguard wg50 peer joshuas-phone allowed-ips '10.0.50.15/32'
 set interfaces wireguard wg50 peer joshuas-phone persistent-keepalive '15'
 set interfaces wireguard wg50 peer joshuas-phone public-key 'LhsEl0YTabwPC6UdCSNfXVcgGvntpjrwwFzHdrSEXl0='
 set interfaces wireguard wg50 peer unsc-pillarofautumn allowed-ips '10.0.50.16/32'
+set interfaces wireguard wg50 peer unsc-pillarofautumn persistent-keepalive '15'
 set interfaces wireguard wg50 peer unsc-pillarofautumn public-key 'XtxaCFQkNqgkHMpxKnglN0DUITE17Cd05GrMIolm8Sw='
 set interfaces wireguard wg50 port '51820'
 set interfaces wireguard wg50 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"

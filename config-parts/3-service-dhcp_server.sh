@@ -79,13 +79,15 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping rpi-octoprint-ender3 ip-address '10.0.20.53'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping rpi-octoprint-ender3 mac-address 'b8:27:eb:82:4c:f1'
 
-# 10.0.20.6x - Vacuums
+# 10.0.20.6x - Vacuums $ TVs
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roomba-890-3176C01071810790 ip-address '10.0.20.60'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roomba-890-3176C01071810790 mac-address 'd0:c5:d3:ae:8c:05'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roomba-i6550-CB26C425C0D7420E8BE8B965CB10DF4F ip-address '10.0.20.61'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roomba-i6550-CB26C425C0D7420E8BE8B965CB10DF4F mac-address '50:14:79:22:ef:f6'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roborock-vacuum-a38 ip-address '10.0.20.62'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping roborock-vacuum-a38 mac-address 'b0:4a:39:71:44:15'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping Living-Room-TV ip-address '10.0.20.63'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping Living-Room-TV mac-address '64:57:25:3b:cb:4b'
 
 # 10.0.20.7x - WLED
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping wled-office-ceiling ip-address '10.0.20.70'

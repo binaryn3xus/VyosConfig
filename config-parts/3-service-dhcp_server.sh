@@ -48,6 +48,10 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-m
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-AllUnderHeaven mac-address 'a0:a4:c5:92:a1:80'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Cairo ip-address '10.0.20.13'
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Cairo mac-address '00:1f:c6:9c:9a:99'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Rubicon ip-address '10.0.20.14'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-Rubicon mac-address '94:e2:3c:5d:29:3d'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-GhostFlag ip-address '10.0.20.15'
+set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping UNSC-GhostFlag mac-address '28:16:a8:4e:03:8e'
 
 # 10.0.20.3x - Cameras
 set service dhcp-server shared-network-name TRUSTED subnet 10.0.20.0/24 static-mapping amcrest-livingroom-camera ip-address '10.0.20.30'

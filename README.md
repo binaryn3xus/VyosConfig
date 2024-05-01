@@ -1,3 +1,13 @@
+
+> [!IMPORTANT]
+> Notice of archival (2024-05-1)
+> Due to the way VyOS has been [handling their community recently](https://blog.vyos.io/community-contributors-userbase-and-lts-builds) I have decided to step away from VyOS as my router platform and have archived this repository.
+> 
+
+---
+---
+---
+
 ![Static Badge](https://img.shields.io/badge/VyOS_Version-1.4-blue?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BinaryN3xus/VyosConfig?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/BinaryN3xus/VyosConfig?style=for-the-badge)
